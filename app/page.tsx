@@ -1,4 +1,5 @@
 import Header from '../components/header';
+import Projects from '../components/projects';
 
 export default function Home() {
   return (
@@ -7,16 +8,7 @@ export default function Home() {
         <div className='h-screen overflow-scroll p-8'>
           <Header />
 
-          <h2 className='text-4xl font-bold'>Projects</h2>
-          <div>
-            iimage
-            <h3 className='text-3xl text-(--color-coffee-200)'>
-              name of project
-            </h3>
-            <p className='text-base'>
-              lorem ipsum.... rust, tictactoe, judische stimme, react app
-            </p>
-          </div>
+          <Projects />
         </div>
       </div>
     </div>
