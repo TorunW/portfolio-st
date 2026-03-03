@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function projects() {
   return (
     <div className='flex flex-col justify-center max-w-7xl px-4 md:px-6 lg:px-8'>
-      <h2 className='text-4xl font-bold text-center mt-12 md:mt-16 lg:mt-20 mb-4 md:mb-6'>
+      <h2 className='text-4xl font-bold text-center mt-12 md:mt-16 lg:mt-20 mb-8 md:mb-12'>
         Projects
       </h2>
       <div className='flex flex-col gap-12 md:gap-16 lg:gap-20'>
@@ -13,7 +13,7 @@ export default function projects() {
               <Image
                 src={'/placeholder.png'}
                 alt='image'
-                layout='fill'
+                fill={true}
                 objectFit='cover'
                 className='object-cover rounded-xl'
               />
@@ -37,6 +37,8 @@ export default function projects() {
                 the full development lifecycle, from requirement analysis to
                 automated regression testing.
               </p>
+              <button>Github rep</button>
+              <button>case study + app (embedded)</button>
             </div>
           </div>
         </div>
@@ -62,12 +64,13 @@ export default function projects() {
                 This experience involved working within an existing codebase and
                 validating functionality during active development changes.
               </p>
+              <button>Github rep</button>
             </div>
             <div className='order-1 md:order-none relative w-full h-64 md:basis-2/5 md:h-auto'>
               <Image
                 src={'/placeholder.png'}
                 alt='image'
-                layout='fill'
+                fill={true}
                 objectFit='cover'
                 className='object-cover rounded-xl'
               />
@@ -81,7 +84,7 @@ export default function projects() {
               <Image
                 src={'/placeholder.png'}
                 alt='image'
-                layout='fill'
+                fill={true}
                 objectFit='cover'
                 className='object-cover rounded-xl'
               />
@@ -109,6 +112,7 @@ export default function projects() {
                 and data protection requirements. Source code available upon
                 request.
               </p>
+              <button>website</button>
             </div>
           </div>
         </div>
@@ -120,25 +124,29 @@ export default function projects() {
                 Pixense Mobile Application
               </h3>
               <p className='text-base mb-4 md:mb-5 lg:mb-6 leading-7 md:leading-8 lg:leading-9'>
-                Designed and developed an AI powered image generation mobile
-                application to gain practical experience with mobile development
-                and product release workflows.
+                Developed a mobile application using React Native Expo featuring
+                AI powered image generation and image recognition workflows.
+                Integrated OpenAI DALL E 3 for prompt based image generation and
+                the Imagga API for automated image tagging.
                 <span className='block h-2 md:h-3 lg:h-4'></span>
-                Independently managed the full application lifecycle including
-                deployment to the Google Play Store and compliance with evolving
-                platform security and developer verification policies.
+                Successfully managed the full release process to the Google Play
+                Store, including configuration, deployment, and compliance
+                requirements. The application was later removed due to ongoing
+                platform verification and maintenance demands that were not
+                feasible for a learning focused project.
                 <span className='block h-2 md:h-3 lg:h-4'></span>
-                Maintaining store compliance required ongoing updates and
-                verification processes, providing practical insight into the
-                operational and maintenance demands of production level mobile
-                applications beyond initial release.
+                The project provided hands on experience with mobile
+                architecture, third party API integration, and production level
+                deployment workflows. A live demo is available via Appetize.
               </p>
+              <button>Github rep</button>
+              <button>play with the app on appetize</button>
             </div>
             <div className='order-1 md:order-none relative w-full h-64 md:basis-2/5 md:h-auto'>
               <Image
                 src={'/placeholder.png'}
                 alt='image'
-                layout='fill'
+                fill={true}
                 objectFit='cover'
                 className='object-cover rounded-xl'
               />
