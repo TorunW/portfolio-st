@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Video from 'next-video';
 
 export default function projects() {
   return (
@@ -12,10 +13,10 @@ export default function projects() {
           <div className='flex flex-col md:flex-row md:-space-x-16 lg:-space-x-20 justify-center'>
             <div className='order-1 md:order-none relative w-full h-64 md:basis-2/5 md:h-auto'>
               <Image
-                src={'/placeholder.png'}
-                alt='image'
+                src={'/Tictactoe-still.png'}
+                alt='image of tictactoe app'
                 fill={true}
-                objectFit='cover'
+                objectFit='fit'
                 className='object-cover rounded-xl'
               />
             </div>
@@ -24,19 +25,19 @@ export default function projects() {
                 TicTacToe – Testing Playground
               </h3>
               <p className='text-base mb-4 md:mb-5 lg:mb-6 leading-7 md:leading-8 lg:leading-9'>
-                Built a TicTacToe web application using Next.js to demonstrate
+                Built a TicTacToe web application using Next.js to apply
                 structured software testing practices in a controlled
                 environment.
                 <span className='block h-2 md:h-3 lg:h-4'></span>
-                Defined functional requirements and created corresponding test
-                cases and test plan using both white box and black box static
-                testing techniques. Currently implementing end to end test
-                automation using Playwright to validate core gameplay logic and
-                user flows.
+                Defined functional requirements, created test cases and a test
+                plan, and applied both white box and black box static testing
+                techniques. The project focuses primarily on manual testing
+                methodology, with end to end test automation using Playwright
+                currently being implemented.
                 <span className='block h-2 md:h-3 lg:h-4'></span>
-                This project focuses on applying testing methodologies across
-                the full development lifecycle, from requirement analysis to
-                automated regression testing.
+                Demonstrates the full manual testing lifecycle from requirement
+                analysis to execution, while progressively expanding into
+                automation practices.
               </p>
               <button>Github rep</button>
               <button>
@@ -71,7 +72,7 @@ export default function projects() {
             </div>
             <div className='order-1 md:order-none relative w-full h-64 md:basis-2/5 md:h-auto'>
               <Image
-                src={'/placeholder.png'}
+                src={'/tempesta-still.png'}
                 alt='image'
                 fill={true}
                 objectFit='cover'

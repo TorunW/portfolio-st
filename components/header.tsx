@@ -15,14 +15,18 @@ export default function header() {
             </h2>
 
             <p className='max-w-2xl text-base leading-7 md:leading-8 lg:leading-9'>
-              ISTQB Certified QA professional with a development background,
-              focused on building and validating reliable, well structured
-              software systems.
+              Junior QA Engineer (ISTQB Certified) with a development
+              background, focused on building and validating reliable, well
+              structured software systems.
             </p>
           </div>
           <div className='grid lg:grid-row-1 grid-cols-2 gap-4 w-fit'>
             <button className='bg-(--color-coffee-900) text-sm md:text-base hover:bg-(--color-coffee-950) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '>
-              <Linkedin className='w-4 h-4 mr-2' /> LinkedIn
+              <Linkedin
+                href='www.linkedin.com/in/torun-wikström-a77011220'
+                className='w-4 h-4 mr-2'
+              />{' '}
+              LinkedIn
             </button>
             <button className='bg-(--color-coffee-900) text-sm md:text-base hover:bg-(--color-coffee-950) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '>
               <Github className='w-4 h-4 mr-2' />
