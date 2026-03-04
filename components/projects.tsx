@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function projects() {
   return (
@@ -38,7 +39,9 @@ export default function projects() {
                 automated regression testing.
               </p>
               <button>Github rep</button>
-              <button>case study + app (embedded)</button>
+              <button>
+                <Link href={'/tictactoe-testing'}>See test cassess</Link>
+              </button>
             </div>
           </div>
         </div>
