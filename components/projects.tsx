@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Video from 'next-video';
 
 export default function projects() {
@@ -39,7 +40,9 @@ export default function projects() {
                 automation practices.
               </p>
               <button>Github rep</button>
-              <button>case study + app (embedded)</button>
+              <button>
+                <Link href={'/tictactoe-testing'}>See test cassess</Link>
+              </button>
             </div>
           </div>
         </div>
