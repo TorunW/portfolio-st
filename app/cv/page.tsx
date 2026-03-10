@@ -1,5 +1,11 @@
-import React from 'react';
-
 export default function page() {
-  return <div>page</div>;
+  return (
+    <div>
+      <embed
+        className='h-screen w-screen'
+        type='application/pdf'
+        src={'Torun-Wikström-CV.pdf'}
+      />
+    </div>
+  );
 }
