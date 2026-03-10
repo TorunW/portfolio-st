@@ -45,12 +45,14 @@ export default function projects() {
                 >
                   Testing showcase
                 </Link>
-                <Link
+                <a
                   href={'https://github.com/TorunW/TicTacToe'}
+                  target='_blank'
+                  rel='noopener noreferrer'
                   className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
                 >
                   Github
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -77,12 +79,14 @@ export default function projects() {
                 This experience involved working within an existing codebase and
                 validating functionality during active development changes.
               </p>
-              <Link
+              <a
                 href={'https://github.com/TorunW/tempesta'}
+                target='_blank'
+                rel='noopener noreferrer'
                 className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
               >
                 Github
-              </Link>
+              </a>
             </div>
             <div className='order-1 md:order-0 relative w-full md:basis-2/5 aspect-video'>
               <Image
@@ -129,12 +133,14 @@ export default function projects() {
                 confidentiality and data protection requirements. Source code
                 available upon request.
               </p>
-              <Link
+              <a
                 href={'https://www.juedische-stimme.de/'}
+                target='_blank'
+                rel='noopener noreferrer'
                 className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
               >
                 Website
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -162,18 +168,22 @@ export default function projects() {
                 deployment workflows. A live demo is available via Appetize.
               </p>
               <div className='flex flex-row gap-4'>
-                <Link
+                <a
                   href={'https://github.com/TorunW/pixense/'}
+                  target='_blank'
+                  rel='noopener noreferrer'
                   className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
                 >
                   Github
-                </Link>
-                <Link
+                </a>
+                <a
                   href={'https://appetize.io/app/b_pszrvccbsdwxq4cxq6n2x5477e'}
+                  target='_blank'
+                  rel='noopener noreferrer'
                   className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
                 >
                   Play around with the App on Appetize
-                </Link>
+                </a>
               </div>
             </div>
             <div className='order-1 md:order-0 relative w-full md:basis-2/5 aspect-video'>

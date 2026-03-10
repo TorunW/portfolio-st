@@ -22,21 +22,25 @@ export default function header() {
             </p>
           </div>
           <div className='grid lg:grid-row-1 grid-cols-2 gap-4 w-fit'>
-            <Link
+            <a
               href={'https://linkedin.com/in/torun-wikström-a77011220'}
+              target='_blank'
+              rel='noopener noreferrer'
               className='bg-(--color-coffee-900) text-sm md:text-base hover:bg-(--color-coffee-950) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
             >
               <Linkedin className='w-4 h-4 mr-2' />
               LinkedIn
-            </Link>
+            </a>
 
-            <Link
+            <a
               href={'https://github.com/TorunW'}
+              target='_blank'
+              rel='noopener noreferrer'
               className='bg-(--color-coffee-900) text-sm md:text-base hover:bg-(--color-coffee-950) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
             >
               <Github className='w-4 h-4 mr-2' />
               GitHub
-            </Link>
+            </a>
             <Link
               href={'/cv'}
               className='bg-(--color-coffee-900) text-sm md:text-base hover:bg-(--color-coffee-950) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
