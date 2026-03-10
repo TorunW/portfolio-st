@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' nighteye='disabled'>
+    <html lang='en' data-nighteye='disabled'>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
