@@ -9,7 +9,7 @@ export default function Home() {
         <div className='h-screen overflow-scroll p-8'>
           <Header />
           <Projects />
-          <About />
+          <About id='about' />
         </div>
       </div>
     </div>
