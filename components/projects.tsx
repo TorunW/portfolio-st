@@ -1,25 +1,25 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function projects() {
   return (
-    <div className='flex flex-col justify-center max-w-7xl px-4 md:px-6 lg:px-8'>
-      <h2 className='text-4xl font-bold text-center mt-12 md:mt-16 lg:mt-20 mb-8 md:mb-12'>
+    <div className='flex flex-col justify-center items-center max-w-7xl px-4 md:px-6 lg:px-8'>
+      <h2 className='text-4xl font-bold text-center mt-4 md:mt-6 lg:mt-0 mb-8 md:mb-12'>
         Projects
       </h2>
       <div className='flex flex-col gap-12 md:gap-16 lg:gap-20'>
         <div className='pb-12 md:pb-20 lg:pb-24'>
-          <div className='flex flex-col md:flex-row md:-space-x-16 lg:-space-x-20 justify-center'>
-            <div className='order-1 md:order-none relative w-full h-64 md:basis-2/5 md:h-auto'>
+          <div className='flex flex-col md:flex-row justify-center'>
+            <div className='order-1 md:order-0 relative w-full md:basis-2/5 aspect-video'>
               <Image
                 src={'/Tictactoe-still.png'}
                 alt='image of tictactoe app'
                 fill={true}
-                objectFit='fit'
-                className='object-cover rounded-xl'
+                className='object-cover rounded'
               />
             </div>
-            <div className='order-2 md:order-none bg-(--color-coffee-950) p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10'>
-              <h3 className='text-3xl text-(--color-coffee-200) mt-8 md:mt-10 lg:mt-12 mb-3 md:mb-4'>
+            <div className='order-2 md:order-0 bg-(--color-coffee-950) rounded p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10 md:-ml-16 lg:-ml-20'>
+              <h3 className='text-3xl text-(--color-coffee-200) mt-2 md:mt-3 lg:mt-4 mb-3 md:mb-4'>
                 TicTacToe – Testing Playground
               </h3>
               <p className='text-base mb-4 md:mb-5 lg:mb-6 leading-7 md:leading-8 lg:leading-9'>
@@ -37,18 +37,29 @@ export default function projects() {
                 analysis to execution, while progressively expanding into
                 automation practices.
               </p>
-              <button>Github rep</button>
-              <button>
-                <Link href={'/tictactoe-testing'}>See test cassess</Link>
-              </button>
+              <div className='flex flex-row gap-4'>
+                <Link
+                  href={'/tictactoe-testing'}
+                  scroll={true}
+                  className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
+                >
+                  Testing showcase
+                </Link>
+                <Link
+                  href={'https://github.com/TorunW/TicTacToe'}
+                  className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
+                >
+                  Github
+                </Link>
+              </div>
             </div>
           </div>
         </div>
 
         <div className='pb-12 md:pb-20 lg:pb-24'>
-          <div className='flex flex-col md:flex-row md:-space-x-16 lg:-space-x-20 justify-centers'>
-            <div className=' order-2 md:order-none   bg-(--color-coffee-950) p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10'>
-              <h3 className='text-3xl text-(--color-coffee-200) mt-8 md:mt-10 lg:mt-12 mb-3 md:mb-4'>
+          <div className='flex flex-col md:flex-row  justify-center'>
+            <div className='order-2 md:order-0 bg-(--color-coffee-950) rounded p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10 md:-mr-16 lg:-mr-20'>
+              <h3 className='text-3xl text-(--color-coffee-200) mt-2 md:mt-3 lg:mt-4 mb-3 md:mb-4'>
                 Tempesta Bookmark Manager
               </h3>
               <p className='text-base mb-4 md:mb-5 lg:mb-6 leading-7 md:leading-8 lg:leading-9'>
@@ -66,33 +77,36 @@ export default function projects() {
                 This experience involved working within an existing codebase and
                 validating functionality during active development changes.
               </p>
-              <button>Github rep</button>
+              <Link
+                href={'https://github.com/TorunW/tempesta'}
+                className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
+              >
+                Github
+              </Link>
             </div>
-            <div className='order-1 md:order-none relative w-full h-64 md:basis-2/5 md:h-auto'>
+            <div className='order-1 md:order-0 relative w-full md:basis-2/5 aspect-video'>
               <Image
                 src={'/tempesta-still.png'}
                 alt='image'
-                fill={true}
-                objectFit='cover'
-                className='object-cover rounded-xl'
+                fill
+                className='object-cover rounded'
               />
             </div>
           </div>
         </div>
 
         <div className='pb-12 md:pb-20 lg:pb-24'>
-          <div className='flex flex-col md:flex-row md:-space-x-16 lg:-space-x-20 justify-center'>
-            <div className='order-1 md:order-none relative w-full h-64 md:basis-2/5 md:h-auto'>
+          <div className='flex flex-col md:flex-row justify-center'>
+            <div className='order-1 md:order-0 relative w-full md:basis-2/5 aspect-video'>
               <Image
-                src={'/placeholder.png'}
+                src={'/NGO-still.png'}
                 alt='image'
-                fill={true}
-                objectFit='cover'
-                className='object-cover rounded-xl'
+                fill
+                className='object-cover rounded'
               />
             </div>
-            <div className='order-2 md:order-none bg-(--color-coffee-950) p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10'>
-              <h3 className='text-3xl text-(--color-coffee-200) mt-8 md:mt-10 lg:mt-12 mb-3 md:mb-4'>
+            <div className='order-2 md:order-0 bg-(--color-coffee-950) rounded p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10 md:-ml-16 lg:-ml-20'>
+              <h3 className='text-3xl text-(--color-coffee-200) mt-2 md:mt-3 lg:mt-4 mb-3 md:mb-4'>
                 NGO Organisation Website
               </h3>
               <p className='text-base mb-4 md:mb-5 lg:mb-6 leading-7 md:leading-8 lg:leading-9'>
@@ -110,19 +124,25 @@ export default function projects() {
                 processes, authentication, and form validation following
                 deployment.
                 <span className='block h-2 md:h-3 lg:h-4'></span>
-                Public repository not available due to client confidentiality
-                and data protection requirements. Source code available upon
-                request.
+                Live site may experience occasional downtime due to external
+                factors. Public repository not available due to client
+                confidentiality and data protection requirements. Source code
+                available upon request.
               </p>
-              <button>website</button>
+              <Link
+                href={'https://www.juedische-stimme.de/'}
+                className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
+              >
+                Website
+              </Link>
             </div>
           </div>
         </div>
 
         <div className='pb-12 md:pb-20 lg:pb-24'>
-          <div className='flex flex-col md:flex-row md:-space-x-16 lg:-space-x-20 justify-centers'>
-            <div className=' order-2 md:order-none   bg-(--color-coffee-950) p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10'>
-              <h3 className='text-3xl text-(--color-coffee-200) mt-8 md:mt-10 lg:mt-12 mb-3 md:mb-4'>
+          <div className='flex flex-col md:flex-row justify-center'>
+            <div className='order-2 md:order-0 bg-(--color-coffee-950) rounded p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10 md:-mr-16 lg:-mr-20'>
+              <h3 className='text-3xl text-(--color-coffee-200) mt-2 md:mt-3 lg:mt-4 mb-3 md:mb-4'>
                 Pixense Mobile Application
               </h3>
               <p className='text-base mb-4 md:mb-5 lg:mb-6 leading-7 md:leading-8 lg:leading-9'>
@@ -141,16 +161,27 @@ export default function projects() {
                 architecture, third party API integration, and production level
                 deployment workflows. A live demo is available via Appetize.
               </p>
-              <button>Github rep</button>
-              <button>play with the app on appetize</button>
+              <div className='flex flex-row gap-4'>
+                <Link
+                  href={'https://github.com/TorunW/pixense/'}
+                  className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
+                >
+                  Github
+                </Link>
+                <Link
+                  href={'https://appetize.io/app/b_pszrvccbsdwxq4cxq6n2x5477e'}
+                  className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
+                >
+                  Play around with the App on Appetize
+                </Link>
+              </div>
             </div>
-            <div className='order-1 md:order-none relative w-full h-64 md:basis-2/5 md:h-auto'>
+            <div className='order-1 md:order-0 relative w-full md:basis-2/5 aspect-video'>
               <Image
-                src={'/placeholder.png'}
+                src={'/Pixense-still.png'}
                 alt='image'
-                fill={true}
-                objectFit='cover'
-                className='object-cover rounded-xl'
+                fill
+                className='object-cover rounded'
               />
             </div>
           </div>
