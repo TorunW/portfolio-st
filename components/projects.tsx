@@ -78,6 +78,9 @@ export default function projects() {
                 currently linked is my fork of the project, which showcases the
                 original testing implementation.
                 <span className='block h-2 md:h-3 lg:h-4'></span>
+                This project provided experience working within an existing
+                codebase, validating functionality during development changes,
+                and understanding how refactoring impacts test suites.
               </p>
               <a
                 href={'https://github.com/TorunW/tempesta'}
