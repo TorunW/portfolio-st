@@ -65,19 +65,22 @@ export default function projects() {
                 Tempesta Bookmark Manager
               </h3>
               <p className='text-base mb-4 md:mb-5 lg:mb-6 leading-7 md:leading-8 lg:leading-9'>
-                Contributed to an open source Rust based bookmark management
-                project through GitHub pull requests.
+                Contributed testing work to an open source Rust based bookmark
+                management project.
                 <span className='block h-2 md:h-3 lg:h-4'></span>
                 Performed early happy path testing of core features such as
                 bookmark creation and editing, and collaborated with developers
-                to verify expected behaviour following application refactoring.
-                After the refactoring of the codebase was initiated by another
-                developer, took ownership of updating and refactoring the
-                remaining automated tests to align with the new structure and
-                ensure continued test reliability.
+                to verify expected behaviour. <br />
+                The project has undergone a major refactoring. As a result, the
+                existing tests require updates to match the new code structure.
+                I am currently reviewing the refactored architecture and
+                preparing updates to realign the automated tests. The repository
+                currently linked is my fork of the project, which showcases the
+                original testing implementation.
                 <span className='block h-2 md:h-3 lg:h-4'></span>
-                This experience involved working within an existing codebase and
-                validating functionality during active development changes.
+                This project provided experience working within an existing
+                codebase, validating functionality during development changes,
+                and understanding how refactoring impacts test suites.
               </p>
               <a
                 href={'https://github.com/TorunW/tempesta'}
