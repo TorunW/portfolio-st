@@ -1,205 +1,169 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import FadeIn from './fade-in';
 
-export default function projects() {
+type Project = {
+  title: string;
+  category: string;
+  categoryTone: 'accent' | 'danger';
+  description: string;
+  tags: string[];
+  meta: string[];
+  href: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
+};
+
+const projects: Project[] = [
+  {
+    title: 'TicTacToe – Testing Playground',
+    category: 'QA / Testing',
+    categoryTone: 'danger',
+    description:
+      'Built a TicTacToe web app with Next.js to practice structured software testing — requirements, test cases, white/black box techniques, and Playwright automation in progress.',
+    tags: ['Next.js', 'Playwright', 'Manual Testing', 'ISTQB'],
+    meta: ['✅ Test lifecycle', '⚡ Automation in progress'],
+    href: '/tictactoe-testing',
+    secondaryHref: 'https://github.com/TorunW/TicTacToe',
+    secondaryLabel: 'GitHub',
+  },
+  {
+    title: 'Tempesta Bookmark Manager',
+    category: 'Open Source',
+    categoryTone: 'accent',
+    description:
+      'Contributed testing to an open-source Rust bookmark manager — happy-path coverage for core features, and ongoing work to realign tests after a major refactor.',
+    tags: ['Rust', 'Testing', 'Open Source'],
+    meta: ['⎇ Fork with tests'],
+    href: 'https://github.com/TorunW/tempesta',
+  },
+  {
+    title: 'NGO Organisation Website',
+    category: 'Web Dev',
+    categoryTone: 'accent',
+    description:
+      'Migrated a full-stack NGO site from WordPress to Next.js and MySQL. Added Stripe donations, membership flows, an admin dashboard, and post-deploy workflow testing.',
+    tags: ['Next.js', 'MySQL', 'Stripe', 'Testing'],
+    meta: ['🌐 Live site'],
+    href: 'https://www.juedische-stimme.de/',
+  },
+  {
+    title: 'Pixense Mobile Application',
+    category: 'Mobile',
+    categoryTone: 'accent',
+    description:
+      'React Native Expo app with AI image generation (DALL·E 3) and Imagga tagging. Shipped to Google Play; demo available on Appetize.',
+    tags: ['React Native', 'Expo', 'OpenAI', 'Imagga'],
+    meta: ['📱 Mobile', '↗ Appetize demo'],
+    href: 'https://github.com/TorunW/pixense/',
+    secondaryHref: 'https://appetize.io/app/b_pszrvccbsdwxq4cxq6n2x5477e',
+    secondaryLabel: 'Appetize',
+  },
+];
+
+function CategoryBadge({
+  label,
+  tone,
+}: {
+  label: string;
+  tone: 'accent' | 'danger';
+}) {
+  const classes =
+    tone === 'danger'
+      ? 'bg-danger/10 text-danger border-danger/20'
+      : 'bg-accent/10 text-accent border-accent/20';
+
   return (
-    <div className='flex flex-col justify-center items-center max-w-7xl px-4 md:px-6 lg:px-8'>
-      <h2 className='text-4xl font-bold text-center mt-4 md:mt-6 lg:mt-0 mb-8 md:mb-12'>
-        Projects
-      </h2>
-      <div className='flex flex-col gap-12 md:gap-16 lg:gap-20'>
-        <div className='pb-12 md:pb-20 lg:pb-24'>
-          <div className='flex flex-col md:flex-row justify-center'>
-            <div className='order-1 md:order-0 relative w-full md:basis-2/5 aspect-video'>
-              <Image
-                src={'/Tictactoe-still.png'}
-                alt='image of tictactoe app'
-                fill={true}
-                className='object-cover rounded'
-              />
-            </div>
-            <div className='order-2 md:order-0 bg-(--color-coffee-950) rounded p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10 md:-ml-16 lg:-ml-20'>
-              <h3 className='text-3xl text-(--color-coffee-200) mt-2 md:mt-3 lg:mt-4 mb-3 md:mb-4'>
-                TicTacToe – Testing Playground
-              </h3>
-              <p className='text-base mb-4 md:mb-5 lg:mb-6 leading-7 md:leading-8 lg:leading-9'>
-                Built a TicTacToe web application using Next.js to apply
-                structured software testing practices in a controlled
-                environment.
-                <span className='block h-2 md:h-3 lg:h-4'></span>
-                Defined functional requirements, created test cases and a test
-                plan, and applied both white box and black box static testing
-                techniques. The project focuses primarily on manual testing
-                methodology, with end to end test automation using Playwright
-                currently being implemented.
-                <span className='block h-2 md:h-3 lg:h-4'></span>
-                Demonstrates the full manual testing lifecycle from requirement
-                analysis to execution, while progressively expanding into
-                automation practices.
-              </p>
-              <div className='flex flex-row gap-4'>
-                <Link
-                  href={'/tictactoe-testing'}
-                  scroll={true}
-                  className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
-                >
-                  Testing showcase
-                </Link>
-                <a
-                  href={'https://github.com/TorunW/TicTacToe'}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
-                >
-                  Github
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <span
+      className={`rounded-[2px] border px-2.5 py-0.5 text-[10px] tracking-[0.15em] uppercase ${classes}`}
+    >
+      {label}
+    </span>
+  );
+}
 
-        <div className='pb-12 md:pb-20 lg:pb-24'>
-          <div className='flex flex-col md:flex-row  justify-center'>
-            <div className='order-2 md:order-0 bg-(--color-coffee-950) rounded p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10 md:-mr-16 lg:-mr-20'>
-              <h3 className='text-3xl text-(--color-coffee-200) mt-2 md:mt-3 lg:mt-4 mb-3 md:mb-4'>
-                Tempesta Bookmark Manager
-              </h3>
-              <p className='text-base mb-4 md:mb-5 lg:mb-6 leading-7 md:leading-8 lg:leading-9'>
-                Contributed testing work to an open source Rust based bookmark
-                management project.
-                <span className='block h-2 md:h-3 lg:h-4'></span>
-                Performed early happy path testing of core features such as
-                bookmark creation and editing, and collaborated with developers
-                to verify expected behaviour. <br />
-                The project has undergone a major refactoring. As a result, the
-                existing tests require updates to match the new code structure.
-                I am currently reviewing the refactored architecture and
-                preparing updates to realign the automated tests. The repository
-                currently linked is my fork of the project, which showcases the
-                original testing implementation.
-                <span className='block h-2 md:h-3 lg:h-4'></span>
-                This project provided experience working within an existing
-                codebase, validating functionality during development changes,
-                and understanding how refactoring impacts test suites.
-              </p>
-              <a
-                href={'https://github.com/TorunW/tempesta'}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
+export default function Projects() {
+  return (
+    <section
+      id='projects'
+      className='relative z-10 border-t border-bdr px-6 py-20 md:px-10'
+    >
+      <FadeIn>
+        <div className='mb-12 flex items-baseline gap-4'>
+          <span className='text-[11px] tracking-[0.1em] text-accent'>03</span>
+          <h2 className='font-syne text-[clamp(1.8rem,4vw,2.8rem)] leading-none font-bold tracking-tight text-ink'>
+            Projects
+          </h2>
+          <div className='mb-1.5 h-px flex-1 bg-bdr'></div>
+        </div>
+      </FadeIn>
+
+      <FadeIn>
+        <div className='grid grid-cols-1 gap-px overflow-hidden rounded-[6px] border border-bdr bg-bdr md:grid-cols-2'>
+          {projects.map((project) => {
+            const isInternal = project.href.startsWith('/');
+            const CardTag = isInternal ? Link : 'a';
+            const cardProps = isInternal
+              ? { href: project.href }
+              : {
+                  href: project.href,
+                  target: '_blank' as const,
+                  rel: 'noopener noreferrer',
+                };
+
+            return (
+              <div
+                key={project.title}
+                className='project-card relative flex flex-col gap-4 bg-surface p-8 transition-colors hover:bg-surface2'
               >
-                Github
-              </a>
-            </div>
-            <div className='order-1 md:order-0 relative w-full md:basis-2/5 aspect-video'>
-              <Image
-                src={'/tempesta-still.png'}
-                alt='image'
-                fill
-                className='object-cover rounded'
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className='pb-12 md:pb-20 lg:pb-24'>
-          <div className='flex flex-col md:flex-row justify-center'>
-            <div className='order-1 md:order-0 relative w-full md:basis-2/5 aspect-video'>
-              <Image
-                src={'/NGO-still.png'}
-                alt='image'
-                fill
-                className='object-cover rounded'
-              />
-            </div>
-            <div className='order-2 md:order-0 bg-(--color-coffee-950) rounded p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10 md:-ml-16 lg:-ml-20'>
-              <h3 className='text-3xl text-(--color-coffee-200) mt-2 md:mt-3 lg:mt-4 mb-3 md:mb-4'>
-                NGO Organisation Website
-              </h3>
-              <p className='text-base mb-4 md:mb-5 lg:mb-6 leading-7 md:leading-8 lg:leading-9'>
-                Developed and migrated a full stack website from WordPress to a
-                custom Next.js and MySQL solution based on stakeholder
-                requirements gathered through planning meetings. Collaborated
-                with a senior developer who primarily focused on backend
-                architecture and acted as a technical mentor, while also
-                contributing to backend implementation.
-                <span className='block h-2 md:h-3 lg:h-4'></span>
-                Implemented secure online donation functionality using Stripe,
-                improved membership and newsletter sign up workflows, and
-                introduced an administrative dashboard for managing content and
-                user data. Performed workflow based testing of payment
-                processes, authentication, and form validation following
-                deployment.
-                <span className='block h-2 md:h-3 lg:h-4'></span>
-                Live site may experience occasional downtime due to external
-                factors. Public repository not available due to client
-                confidentiality and data protection requirements. Source code
-                available upon request.
-              </p>
-              <a
-                href={'https://www.juedische-stimme.de/'}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
-              >
-                Website
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className='pb-12 md:pb-20 lg:pb-24'>
-          <div className='flex flex-col md:flex-row justify-center'>
-            <div className='order-2 md:order-0 bg-(--color-coffee-950) rounded p-6 md:p-8 relative md:top-12 lg:top-16 md:basis-3/5 z-10 md:-mr-16 lg:-mr-20'>
-              <h3 className='text-3xl text-(--color-coffee-200) mt-2 md:mt-3 lg:mt-4 mb-3 md:mb-4'>
-                Pixense Mobile Application
-              </h3>
-              <p className='text-base mb-4 md:mb-5 lg:mb-6 leading-7 md:leading-8 lg:leading-9'>
-                Developed a mobile application using React Native Expo featuring
-                AI powered image generation and image recognition workflows.
-                Integrated OpenAI DALL E 3 for prompt based image generation and
-                the Imagga API for automated image tagging.
-                <span className='block h-2 md:h-3 lg:h-4'></span>
-                Successfully managed the full release process to the Google Play
-                Store, including configuration, deployment, and compliance
-                requirements. The application was later removed due to ongoing
-                platform verification and maintenance demands that were not
-                feasible for a learning focused project.
-                <span className='block h-2 md:h-3 lg:h-4'></span>
-                The project provided hands on experience with mobile
-                architecture, third party API integration, and production level
-                deployment workflows. A live demo is available via Appetize.
-              </p>
-              <div className='flex flex-row gap-4'>
-                <a
-                  href={'https://github.com/TorunW/pixense/'}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
+                <CardTag
+                  {...cardProps}
+                  className='flex flex-col gap-4 text-inherit no-underline'
                 >
-                  Github
-                </a>
-                <a
-                  href={'https://appetize.io/app/b_pszrvccbsdwxq4cxq6n2x5477e'}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='bg-(--color-coffee-800) text-sm md:text-base hover:bg-(--color-coffee-900) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
-                >
-                  Play around with the App on Appetize
-                </a>
+                  <div className='flex items-start justify-between'>
+                    <CategoryBadge
+                      label={project.category}
+                      tone={project.categoryTone}
+                    />
+                    <span className='text-xl text-muted'>↗</span>
+                  </div>
+                  <div className='font-syne text-xl leading-tight font-bold tracking-tight text-ink'>
+                    {project.title}
+                  </div>
+                  <p className='flex-1 text-[12px] leading-[1.8] text-muted'>
+                    {project.description}
+                  </p>
+                  <div className='flex flex-wrap gap-1.5'>
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className='rounded-[2px] border border-bdr px-2 py-0.5 text-[10px] text-muted'
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </CardTag>
+
+                <div className='flex flex-wrap items-center gap-4 border-t border-bdr pt-4 text-[11px] text-muted'>
+                  {project.meta.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                  {project.secondaryHref && (
+                    <a
+                      href={project.secondaryHref}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-accent no-underline transition hover:text-accent2'
+                    >
+                      {project.secondaryLabel} ↗
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
-            <div className='order-1 md:order-0 relative w-full md:basis-2/5 aspect-video'>
-              <Image
-                src={'/Pixense-still.png'}
-                alt='image'
-                fill
-                className='object-cover rounded'
-              />
-            </div>
-          </div>
+            );
+          })}
         </div>
-      </div>
-    </div>
+      </FadeIn>
+    </section>
   );
 }

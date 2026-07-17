@@ -1,17 +1,23 @@
+import Nav from '../components/nav';
 import Header from '../components/header';
-import Projects from '../components/projects';
 import About from '../components/about';
+import Stats from '../components/stats';
+import Projects from '../components/projects';
+import Stack from '../components/stack';
+import Contact from '../components/contact';
+import Footer from '../components/footer';
 
 export default function Home() {
   return (
-    <div className='bg-[url(/background.png)] bg-no-repeat bg-cover'>
-      <div className='bg-linear-to-t from-(--color-background) from-60% to-(--transparent) h-screen flex items-center justify-center'>
-        <div className='h-screen overflow-scroll p-8'>
-          <Header />
-          <Projects />
-          <About id='about' />
-        </div>
-      </div>
+    <div className='relative'>
+      <Nav />
+      <Header />
+      <About id='about' />
+      <Stats />
+      <Projects />
+      <Stack />
+      <Contact />
+      <Footer />
     </div>
   );
 }
