@@ -1,61 +1,64 @@
-import { Github, Linkedin, NotepadText, User } from 'lucide-react';
-import Link from 'next/link';
-
-export default function header() {
+export default function Header() {
   return (
-    <section className='py-12 md:py-16 lg:py-24'>
-      <div className='max-w-7xl mx-auto px-4 md:px-6 lg:px-8'>
-        <div className='flex flex-col gap-8 md:gap-10 lg:gap-12'>
-          <h1 className='text-5xl md:text-6xl font-bold text-(--color-coffee-50)'>
-            Torun Alenius Wikström
-          </h1>
+    <section className='relative z-10 flex min-h-screen flex-col justify-end px-6 pt-24 pb-20 md:px-10'>
+      <div className='mb-6 animate-fade-up-1 text-[11px] tracking-[0.2em] text-accent uppercase opacity-0'>
+        {'//'} junior QA engineer · ISTQB certified
+      </div>
 
-          <div className='flex flex-col gap-3 md:gap-4'>
-            <h2 className='text-2xl md:text-3xl text-(--color-coffee-200)'>
-              Web Developer & Software Tester
-            </h2>
+      <h1 className='font-syne mb-6 animate-fade-up-2 text-[clamp(3.5rem,10vw,9rem)] leading-[0.9] font-extrabold tracking-tight text-ink opacity-0'>
+        Torun
+        <br />
+        <span className='text-accent'>Wikström</span>
+      </h1>
 
-            <p className='max-w-2xl text-base leading-7 md:leading-8 lg:leading-9'>
-              Junior QA Engineer (ISTQB Certified) with a development
-              background, focused on building and validating reliable, well
-              structured software systems.
-            </p>
-          </div>
-          <div className='grid lg:grid-row-1 grid-cols-2 gap-4 w-fit'>
-            <a
-              href={'https://linkedin.com/in/torun-wikström-a77011220'}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='bg-(--color-coffee-900) text-sm md:text-base hover:bg-(--color-coffee-950) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
-            >
-              <Linkedin className='w-4 h-4 mr-2' />
-              LinkedIn
-            </a>
+      <p className='mb-10 max-w-[550px] animate-fade-up-3 text-[13px] leading-[1.8] text-muted opacity-0'>
+        Web developer &amp; software tester. Junior QA Engineer (ISTQB
+        Certified) with a development background, focused on building and
+        validating reliable, well structured software systems.
+      </p>
 
-            <a
-              href={'https://github.com/TorunW'}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='bg-(--color-coffee-900) text-sm md:text-base hover:bg-(--color-coffee-950) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
-            >
-              <Github className='w-4 h-4 mr-2' />
-              GitHub
-            </a>
-            <Link
-              href={'/cv'}
-              className='bg-(--color-coffee-900) text-sm md:text-base hover:bg-(--color-coffee-950) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
-            >
-              <NotepadText className='w-4 h-4 mr-2' /> Read my CV
-            </Link>
-            <Link
-              href={'/#about'}
-              className='bg-(--color-coffee-900) text-sm md:text-base hover:bg-(--color-coffee-950) hover:cursor-pointer text-(--color-coffee-200) font-bold py-2 px-4 rounded inline-flex items-center '
-            >
-              <User className='w-4 h-4 mr-2' />
-              About me
-            </Link>
-          </div>
-        </div>
+      <div className='mb-16 flex flex-wrap gap-4 animate-fade-up-4 opacity-0'>
+        <a
+          href='#projects'
+          className='inline-flex items-center gap-1.5 rounded border border-accent bg-accent px-4 py-2 font-mono text-xs font-medium text-bg no-underline transition hover:border-accent2 hover:bg-accent2'
+        >
+          View Projects
+        </a>
+        <a
+          href='#contact'
+          className='inline-flex items-center gap-1.5 rounded border border-bdr bg-transparent px-4 py-2 font-mono text-xs text-ink no-underline transition hover:border-accent hover:text-accent'
+        >
+          Get In Touch
+        </a>
+      </div>
+
+      <div className='flex animate-fade-up-5 items-center gap-6 opacity-0'>
+        <a
+          href='https://github.com/TorunW'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='flex items-center gap-1.5 text-xs tracking-[0.06em] text-muted no-underline transition hover:text-accent'
+        >
+          <span className='text-[10px]'>↗</span>GitHub
+        </a>
+        <a
+          href='https://linkedin.com/in/torun-wikström-a77011220'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='flex items-center gap-1.5 text-xs tracking-[0.06em] text-muted no-underline transition hover:text-accent'
+        >
+          <span className='text-[10px]'>↗</span>LinkedIn
+        </a>
+        <a
+          href='/cv'
+          className='flex items-center gap-1.5 text-xs tracking-[0.06em] text-muted no-underline transition hover:text-accent'
+        >
+          <span className='text-[10px]'>↗</span>CV
+        </a>
+      </div>
+
+      <div className='hero-scroll absolute right-6 bottom-8 animate-fade-up-6 text-[11px] tracking-[0.15em] text-muted uppercase opacity-0 [writing-mode:vertical-rl] md:right-10'>
+        Scroll
       </div>
     </section>
   );
