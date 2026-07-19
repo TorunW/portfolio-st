@@ -1,0 +1,10 @@
+{
+  "name": "wedding-budget-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone wedding budget tracker with localStorage",
+  "scripts": {
+    "dev": "npx --yes serve .",
+    "start": "npx --yes serve ."
+  }
+}
