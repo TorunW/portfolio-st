@@ -1,9 +1,0 @@
-{
-  "/_global-error/page": "app/_global-error/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/cv/page": "app/cv/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js",
-  "/tictactoe-testing/page": "app/tictactoe-testing/page.js",
-  "/wedding-budget/page": "app/wedding-budget/page.js"
-}
